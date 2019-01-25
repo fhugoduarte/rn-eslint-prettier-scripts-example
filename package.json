@@ -4,7 +4,10 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest"
+    "test": "jest",
+    "precommit": "lint-staged",
+    "pretty": "prettier --write \"src/**/*.js\"",
+    "lint": "eslint src"
   },
   "dependencies": {
     "react": "16.6.3",
@@ -15,9 +18,32 @@
     "babel-jest": "23.6.0",
     "jest": "23.6.0",
     "metro-react-native-babel-preset": "0.51.1",
-    "react-test-renderer": "16.6.3"
+    "react-test-renderer": "16.6.3",
+
+    "babel-eslint": "10.0.1",
+    "babel-plugin-jsx-control-statements": "3.2.8",
+    "babel-preset-react-native": "5.0.2",
+    "eslint": "5.6.1",
+    "eslint-config-airbnb": "17.1.0",
+    "eslint-config-prettier": "3.1.0",
+    "eslint-plugin-import": "2.14.0",
+    "eslint-plugin-jsx-a11y": "6.1.1",
+    "eslint-plugin-jsx-control-statements": "2.2.1",
+    "eslint-plugin-prettier": "3.0.0",
+    "eslint-plugin-react": "7.11.1",
+    "eslint-plugin-react-native": "3.3.0",
+    "husky": "1.1.0",
+    "lint-staged": "7.3.0",
+    "prettier": "1.14.3"
   },
   "jest": {
     "preset": "react-native"
+  },
+  "lint-staged": {
+    "*.js": [
+      "yarn pretty",
+      "yarn lint",
+      "git add"
+    ]
   }
 }
