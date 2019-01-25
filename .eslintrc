@@ -1,0 +1,54 @@
+{
+  "env": {
+    "react-native/react-native": true,
+    "jest": true
+  },
+  "parser": "babel-eslint",
+  "plugins": [
+    "react",
+    "react-native",
+    "prettier",
+    "jsx-control-statements"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true,
+      "modules": true
+    }
+  },
+  "extends" : [
+    "eslint:recommended",
+    "airbnb",
+    "plugin:react/recommended",
+    "plugin:react-native/all",
+    "plugin:prettier/recommended",
+    "plugin:jsx-control-statements/recommended"
+  ],
+  "rules" : {
+    "import/prefer-default-export": "off",
+    "react/require-default-props": "off",
+    "react/forbid-prop-types": "off",
+    "arrow-body-style" : "warn",
+    "react/jsx-no-undef": [2, {
+      "allowGlobals": true
+    }],
+    "react/jsx-filename-extension": [1, {
+      "extensions": [".js", ".jsx"]
+    }],
+    "react/prefer-stateless-function": [2, {
+      "ignorePureComponents": true
+    }],
+    "react/no-unescaped-entities": ["error", {
+      "forbid": [">", "}"]
+    }],
+    "import/no-extraneous-dependencies": ["error", {
+        "devDependencies": true,
+        "optionalDependencies": false,
+        "peerDependencies": false
+      }
+    ]
+  },
+  "settings": {
+    "import/resolver": {"node": {"extensions": [".js", ".android.js", ".ios.js"]}}
+  }
+}
