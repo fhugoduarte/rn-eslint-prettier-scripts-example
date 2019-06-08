@@ -1,4 +1,4 @@
-# rn-eslint-prettier-scripts-example
+# Eslint && Prettier Config Example
 
 Sample project for eslint and prettier configuration in a React Native project.
 
@@ -82,4 +82,6 @@ It's very easy, just add these lines in your package.json
 Therefore, whenever the user adds a commit, the prettier will automatically format all .js files that have been modified and eslint will check to see if they all follow the configured patterns. If any code does not fit in these settings the eslint will show the error in a very clear way.
 
 #### Contact ####
+
+**Email:** h.duarte222@gmail.com <br />
 [LinkedIn](https://www.linkedin.com/in/hugo-duarte-3392bb153/)
